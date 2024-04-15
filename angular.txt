@@ -1,0 +1,47 @@
+Basic Commands
+-------------------
+
+- To Create Project : ng new projectname
+- To run            : ng serve --open
+- To Create Components : ng g c component name
+
+
+Basic Concepts
+-------------------
+
+- Module - To hold Components
+- components - Part UI (Combination of TS file ,HTML,CSS,Root Component,App component)
+- To Setup Path - Define path in routing component
+-Data Binding - Data share within a component
+  One Way Data Binding 
+    - ts (component) to html (view/template)
+       -string interpolation {{class}}
+       - property binding  [class property]
+    - html (view) to ts(component) 
+        event binding  = (click)
+        event binding using  $event 
+            event binding using template variable = #variable-name
+
+  -Two Way Data Binding- using [(ngModel)] directive
+     import formsModule to module file ,then use [(ngModel)]= "class property"
+   - Angular directives : are classes that add additional behaviour to html elements
+           - prebuilt directives 
+                 - component directives :component selector used to display component template 
+                  - ngModel directive :used to manage form control
+
+              -structural directives : used to add or remove elements from angular application
+                - *ngIf = "conditional rendering
+                - *ngFor = manage list of items
+
+    -Dependency injection : communicate between two components
+               when two classes are dependent then one class can access others property and function,it should provide
+               in constructor
+               -syntax : access-specifier variable-name :dependent-class-name
+
+
+      - handling asynchronus functions : rxjs library
+        observable :
+           -subscribe(callnback/observer object): resolve state
+        -api call :use http methods in httpclient class
+                   :import  httpclientModule to your module file
+                   
